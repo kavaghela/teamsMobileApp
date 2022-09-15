@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <script src="MicrosoftTeams.min.js">
+
+    </script>
+    <script>
+        console.log("outsite window load");
+        function onLoad() {
+            console.log("outsite before initialize");
+            microsoftTeams.app.initialize().then(
+                function () {
+                    console.log("initialize then");
+                    microsoftTeams.app.openLink("https://migros.sharepoint.com/sites/MGB_INTRA-home");
+                }
+            );
+            console.log("outsite after initialize");
+        }
+    </script>
+</head>
+
+<body onload="onLoad()">
+
+</body>
+
+</html>
